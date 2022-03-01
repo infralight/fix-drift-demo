@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "bar3" {
-  ami      = "ami-0341aeea105412b57"
+  ami      = "ami-0ca05c6eaa4ac40e0"
   instance_type = var.instance_type
 
   ebs_block_device {
@@ -16,7 +16,7 @@ resource "aws_instance" "bar3" {
 }
 
 resource "aws_ebs_volume" "example" {
-  availability_zone = "us-west-2a"
+  availability_zone = "us-east-1a"
   size              = 11
 
   tags = {
