@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "bar3" {
-  ami      = "ami-0ca05c6eaa4ac40e0"
+  ami      = "ami-048ff3da02834afdc"
   instance_type = var.instance_type
 
   ebs_block_device {
