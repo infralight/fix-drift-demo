@@ -23,3 +23,8 @@ resource "aws_ebs_volume" "example" {
     Name = "HelloWorld"
   }
 }
+
+variable "instance_type" {
+  type        = string
+  default     = "t2.micro"
+}
