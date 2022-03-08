@@ -1,4 +1,4 @@
 variable "instance_type" {
   type        = string
-  default     = "t1.micro"
+  default     = "t2.nano"
 }
