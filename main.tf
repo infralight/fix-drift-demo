@@ -20,6 +20,6 @@ resource "aws_ebs_volume" "example" {
   size              = 11
 
   tags = {
-    Name = "HelloWorld"
+    Name = "infra-storage"
   }
 }
