@@ -17,7 +17,7 @@ resource "aws_instance" "bar3" {
 
 resource "aws_ebs_volume" "example" {
   availability_zone = "us-east-1a"
-  size              = 11
+  size              = 14
 
   tags = {
     Name = "infra-storage"
