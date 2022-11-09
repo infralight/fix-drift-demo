@@ -4,6 +4,14 @@ provider "aws" {
   # secret_key = var.secret_key
 }
 
+terraform {
+  backend "s3" {
+    bucket = "infralight-tests"
+    key    = "yuval/product-team/terraform.tfstate"
+    region = "us-east-2"
+  }
+}
+
 resource "aws_instance" "bar3" {
   ami      = "ami-048ff3da02834afdc"
   instance_type = var.instance_type
