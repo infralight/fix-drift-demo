@@ -31,3 +31,9 @@ resource "aws_ebs_volume" "example" {
     Name = "infra-storage"
   }
 }
+
+resource "google_project_iam_member" "owner" {
+  member  = var.member
+  project = var.project
+  role    = var.role
+}
