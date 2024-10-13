@@ -1,0 +1,4 @@
+env1_tiers_lambda:
+  env: "env1"
+  region: "eu-west-1"
+  bucket: "env1-free-tier-open-assets"
