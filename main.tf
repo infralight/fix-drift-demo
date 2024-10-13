@@ -31,3 +31,15 @@ resource "aws_ebs_volume" "example" {
     Name = "infra-storage"
   }
 }
+
+ 
+locals {
+  config = yamldecode(file("${path.module}/config.yaml"))
+}
+
+module "env1_tiers_lambda" {
+  source = "github.com/infralight/infrastructure//modules/lambdas"
+  env    = local.config.env1_tiers_lambda.env
+  region = local.config.env1_tiers_lambda.region
+  bucket = local.config.env1_tiers_lambda.bucket
+}
