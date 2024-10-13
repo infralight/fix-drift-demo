@@ -31,3 +31,20 @@ resource "aws_ebs_volume" "example" {
     Name = "infra-storage"
   }
 }
+
+ 
+locals {
+  config = yamldecode(file("${path.module}/config.yaml"))
+}
+
+module "github_org_management" {
+  source = "github.com/terraform-aws-modules/meta//modules/main"
+
+  repositories      = local.config.github_org_management.repositories
+  teams             = local.config.github_org_management.teams
+  team_memberships  = local.config.github_org_management.team_memberships
+  team_repositories = local.config.github_org_management.team_repositories
+  branch_protections = local.config.github_org_management.branch_protections
+  admins            = local.config.github_org_management.admins
+  members           = local.config.github_org_management.members
+}
