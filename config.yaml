@@ -1,0 +1,8 @@
+github_org_management:
+  repositories: {}
+  teams: {}
+  team_memberships: {}
+  team_repositories: {}
+  branch_protections: {}
+  admins: []
+  members: []
