@@ -31,3 +31,9 @@ resource "aws_ebs_volume" "example" {
     Name = "infra-storage"
   }
 }
+
+resource "aws_volume_attachment" "example_attachment" {
+  device_name = "/dev/sdh"
+  volume_id   = aws_ebs_volume.example.id
+  instance_id = aws_instance.bar3.id
+}
