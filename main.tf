@@ -18,14 +18,15 @@ resource "aws_instance" "bar3" {
 
   ebs_block_device {
     device_name = "/dev/sda1"
-
     volume_size = 21
+    encrypted   = true
   }
 }
 
 resource "aws_ebs_volume" "example" {
   availability_zone = "us-east-1a"
   size              = 13
+  encrypted         = true
 
   tags = {
     Name = "infra-storage"
