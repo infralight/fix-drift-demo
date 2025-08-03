@@ -15,6 +15,6 @@ resource "aws_instance" "web_server" {
   instance_type = "t3.micro"
   subnet_id     = "subnet-095804f2ff2be589b"
   tags = {
-    Name = "production-web"
+    Name = "production-webb"
   }
 }
