@@ -18,5 +18,6 @@ resource "aws_instance" "web_server" {
     Name = "production-web"
     Team        = "platform"
     CostCenter  = "cc-1234"
+    Environment = "production"
   }
 }
