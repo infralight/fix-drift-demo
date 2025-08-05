@@ -12,7 +12,7 @@ provider "aws" {
 
 resource "aws_instance" "web_server" {
   ami           = "ami-08a6efd148b1f7504"
-  instance_type = "t3.large"
+  instance_type = "t3.micro"
   subnet_id     = "subnet-095804f2ff2be589b"
   tags = {
     Name = "production-web"
