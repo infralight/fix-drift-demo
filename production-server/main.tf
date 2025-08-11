@@ -17,7 +17,7 @@ resource "aws_instance" "web_server" {
   tags = {
     Name = "production-web"
     Team        = "platform"
-    CostCenter  = "cc-1234"
+    CostCenter  = "cc-12345"
     Environment = "production"
   }
 }
