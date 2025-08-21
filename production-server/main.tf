@@ -16,8 +16,28 @@ resource "aws_instance" "web_server" {
   subnet_id     = "subnet-095804f2ff2be589b"
   tags = {
     Name = "production-web"
-    Team        = "platform"
+    Team        = "platformmm"
     CostCenter  = "cc-1234"
     Environment = "production"
+  }
+}
+
+resource "aws_iam_policy" "example" {
+  name        = "example-policy"
+  description = "Example IAM policy"
+  policy      = data.aws_iam_policy_document.example.json
+}
+data "aws_iam_policy_document" "example" {
+  statement {
+    effect = "Allow"
+    
+    actions = [
+      "s3:GetObject",
+      "s3:PutObject"
+    ]
+    
+    resources = [
+      "arn:aws:s3:::my-bucket/*"
+    ]
   }
 }
