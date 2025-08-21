@@ -16,7 +16,7 @@ resource "aws_instance" "web_server" {
   subnet_id     = "subnet-095804f2ff2be589b"
   tags = {
     Name = "production-web"
-    Team        = "platformm"
+    Team        = "platformmm"
     CostCenter  = "cc-1234"
     Environment = "production"
   }
