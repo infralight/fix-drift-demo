@@ -8,6 +8,6 @@ subnet_id     = "subnet-095804f2ff2be589b"
 
 # Resource Tags
 environment  = "production"
-team         = "platform-3"
+team         = "platform-4"
 cost_center  = "cc-1234"
 server_name  = "production-web"
