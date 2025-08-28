@@ -1,3 +1,5 @@
 bucket         = "workflows-pre-ga-test-april-2024"
 key            = "production-server.tfstate"
 region         = "us-east-1"
+dynamodb_table = "firefly-runners"
+encrypt        = "true"
