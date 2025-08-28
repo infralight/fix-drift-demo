@@ -10,3 +10,8 @@ resource "aws_instance" "web_server" {
     Environment = var.environment
   }
 }
+
+module "vpc-endpoints" {
+  source = "github.com/terraform-aws-modules/terraform-aws-vpc//modules/vpc-endpoints"
+
+}
