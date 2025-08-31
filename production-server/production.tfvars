@@ -7,7 +7,7 @@ instance_type = "t3.micro"
 subnet_id     = "subnet-095804f2ff2be589b"
 
 # Resource Tags
-environment  = "production"
+environment  = "productionnn"
 team         = "platform"
 cost_center  = "cc-1234"
-server_name  = "production-web"
+server_name  = "production-webbb"
