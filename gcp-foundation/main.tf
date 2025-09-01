@@ -23,6 +23,7 @@ provider "random" {
 
 module "bootstrap" {
   source = "github.com/terraform-google-modules/terraform-example-foundation//0-bootstrap"
+  project_id            = "dev-landing-page-470309"
   billing_account       = "Firefly - comm-it.cloud - 1"
   org_id                = "1002169620247"
   groups                = {
