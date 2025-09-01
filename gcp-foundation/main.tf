@@ -7,7 +7,7 @@ terraform {
   }
   backend "gcs" {
     bucket  = "firefly-foundation"
-    prefix  = "dev1"
+    prefix  = "dev"
   }
 }
 
