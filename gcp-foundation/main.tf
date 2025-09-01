@@ -14,16 +14,12 @@ terraform {
 provider "time" {
 }
 
-provider "google" {
-  project = "dev-landing-page-470309"
-}
-
 provider "random" {
 }
 
 module "bootstrap" {
   source = "github.com/terraform-google-modules/terraform-example-foundation//0-bootstrap"
-  project_id            = "dev-landing-page-470309"
+  project_prefix        = "blah"
   billing_account       = "Firefly - comm-it.cloud - 1"
   org_id                = "1002169620247"
   groups                = {
