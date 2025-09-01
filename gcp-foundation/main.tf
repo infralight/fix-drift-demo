@@ -23,11 +23,11 @@ provider "random" {
 module "bootstrap" {
   source = "github.com/terraform-google-modules/terraform-example-foundation//0-bootstrap"
 
-  billing_account       = "Firefly - comm-it.cloud - 1"
-  org_id                = "\t1002169620247"
+  billing_account       = "dev-landing-page-470309"
+  org_id                = "1002169620247"
   groups                = {
       create_required_groups = true
-      billing_project        = "your-billing-project-id"
+      billing_project        = "Firefly - comm-it.cloud - 1"
       required_groups = {
         group_org_admins        = "gcp-org-admins@yourdomain.com"
         group_billing_admins    = "gcp-billing-admins@yourdomain.com"
