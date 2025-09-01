@@ -20,7 +20,7 @@ provider "google" {
 provider "random" {
 }
 
-module "0-bootstrap" {
+module "bootstrap" {
   source = "github.com/terraform-google-modules/terraform-example-foundation//0-bootstrap"
 
   billing_account       = "Firefly - comm-it.cloud - 1"
