@@ -15,6 +15,7 @@ provider "time" {
 }
 
 provider "google" {
+  project = "dev-landing-page-470309"
 }
 
 provider "random" {
