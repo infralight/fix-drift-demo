@@ -14,6 +14,11 @@ variable "instance_type" {
   description = "EC2 instance type"
   type        = string
   default     = "t3.micro"
+
+  validation {
+    condition     = contains(["t3.micro", "t3.nano", "t3.small"], value)
+    error_message = "Instance type must be one of: t3.micro, t3.nano, t3.small"
+  }
 }
 
 variable "subnet_id" {
@@ -26,6 +31,10 @@ variable "environment" {
   description = "Environment name"
   type        = string
   default     = "production"
+  validation {
+    condition     = contains(["production", "staging", "development"], value)
+    error_message = "Environment must be one of: production, staging, development"
+  }
 }
 
 variable "team" {
@@ -37,6 +46,10 @@ variable "team" {
 variable "cost_center" {
   description = "Cost center for billing"
   type        = string
+  validation {
+    condition     = contains(["cc-1234", "cc-5678", "cc-9101"], value)
+    error_message = "Cost center must be one of: cc-1234, cc-5678, cc-9101"
+  }
 }
 
 variable "server_name" {
