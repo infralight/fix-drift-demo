@@ -12,6 +12,9 @@ terraform {
   }
 }
 
+provider "aws" {
+}
+
 module "server" {
   source = "github.com/infralight/fix-drift-demo//server"
 
