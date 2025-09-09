@@ -7,6 +7,7 @@ variable "aws_region" {
 variable "ami_id" {
   description = "AMI ID for the EC2 instance"
   type        = string
+  default     = "ami-08a6efd148b1f7504"
 }
 
 variable "instance_type" {
@@ -18,6 +19,7 @@ variable "instance_type" {
 variable "subnet_id" {
   description = "Subnet ID for the EC2 instance"
   type        = string
+  default     = "subnet-095804f2ff2be589b"
 }
 
 variable "environment" {
