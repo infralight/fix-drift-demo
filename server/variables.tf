@@ -16,7 +16,7 @@ variable "instance_type" {
   default     = "t3.micro"
 
   validation {
-    condition     = contains(["t3.micro", "t3.nano", "t3.small"], value)
+    condition     = contains(["t3.micro", "t3.nano", "t3.small"], var.instance_type)
     error_message = "Instance type must be one of: t3.micro, t3.nano, t3.small"
   }
 }
@@ -32,7 +32,7 @@ variable "environment" {
   type        = string
   default     = "production"
   validation {
-    condition     = contains(["production", "staging", "development"], value)
+    condition     = contains(["production", "staging", "development"], var.environment)
     error_message = "Environment must be one of: production, staging, development"
   }
 }
@@ -47,7 +47,7 @@ variable "cost_center" {
   description = "Cost center for billing"
   type        = string
   validation {
-    condition     = contains(["cc-1234", "cc-5678", "cc-9101"], value)
+    condition     = contains(["cc-1234", "cc-5678", "cc-9101"], var.cost_center)
     error_message = "Cost center must be one of: cc-1234, cc-5678, cc-9101"
   }
 }
